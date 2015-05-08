@@ -1,0 +1,17 @@
+/**
+ * Created by Ash.Zhang on 2015/5/8.
+ */
+
+
+.clearfix {
+
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

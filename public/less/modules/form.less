@@ -1,0 +1,141 @@
+/**
+ * Created by Ash.Zhang on 2015/5/8.
+ */
+
+
+
+// General
+// --------------------------
+
+button,
+input,
+select {
+  border-radius: @border-radius;
+  display: block;
+  height: @control-height;
+  line-height: @control-height;
+  padding-bottom: 0;
+  padding-top: 0;
+  outline: 0;
+  width: 100%;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: inline;
+  height: auto;
+  width: auto;
+}
+
+input[type=date],
+input[type=time] {
+  display: inline;
+  width: auto;
+}
+
+label {
+  display: block;
+  line-height: @control-height;
+}
+
+
+// Button
+// --------------------------
+
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: @color-theme-1;
+  border: 0;
+  color: #fff;
+  line-height: 1;
+  .user-select(none);
+
+  &:active {
+    background: darken(@color-theme-1, 10%);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+
+.btn-theme-2 {
+  background: @color-theme-2;
+
+  &:active {
+    background: darken(@color-theme-2, 10%);
+  }
+}
+
+.btn-theme-3 {
+  background: @color-theme-3;
+
+  &:active {
+    background: darken(@color-theme-3, 10%);
+  }
+}
+
+.btn-theme-4 {
+  background: @color-theme-4;
+
+  &:active {
+    background: darken(@color-theme-4, 10%);
+  }
+}
+
+.btn-theme-5 {
+  background: @color-theme-5;
+
+  &:active {
+    background: darken(@color-theme-5, 10%);
+  }
+}
+
+.btn-theme-6 {
+  background: @color-theme-6;
+
+  &:active {
+    background: darken(@color-theme-6, 10%);
+  }
+}
+
+.btn-rounded {
+  border-radius: @control-height / 2;
+}
+
+
+// Input
+// --------------------------
+
+input[type=text],
+input[type=url],
+input[type=email],
+input[type=number],
+input[type=search] {
+  background: @color-bg;
+  border: @border-width solid @color-border;
+  box-shadow: none;
+  padding-left: @gap / 2;
+  padding-right: @gap / 2;
+  -webkit-appearance: none;
+
+  &:focus {
+    background: #fff;
+  }
+}
+
+input[type=date],
+input[type=time] {
+  background: @color-bg;
+  border: @border-width solid @color-border;
+  box-shadow: none;
+}
+
+
+// Select
+// --------------------------
+
+select {
+  background: @color-bg;
+  border: @border-width solid @color-border;
+}

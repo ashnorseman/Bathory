@@ -1,0 +1,253 @@
+/**
+ * Created by Ash.Zhang on 2015/5/8.
+ */
+
+
+// Normal
+// --------------------------
+
+.tab {
+  color: @color-theme-1;
+  text-align: center;
+
+  > ul {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    > li {
+      border: @border-width solid @color-theme-1;
+      border-left-width: 0;
+      display: table-cell;
+      height: 2rem;
+      vertical-align: middle;
+
+      &:first-child {
+        border-left-width: @border-width;
+        border-radius: @border-radius 0 0 @border-radius;
+      }
+
+      &:last-child {
+        border-radius: 0 @border-radius @border-radius 0;
+      }
+
+      &.active {
+        background: @color-theme-1;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.tab-theme-2 {
+  color: @color-theme-2;
+
+  > ul {
+
+    > li {
+      border-color: @color-theme-2;
+
+      &.active {
+        background: @color-theme-2;
+      }
+    }
+  }
+}
+
+.tab-theme-3 {
+  color: @color-theme-3;
+
+  > ul {
+
+    > li {
+      border-color: @color-theme-3;
+
+      &.active {
+        background: @color-theme-3;
+      }
+    }
+  }
+}
+
+.tab-theme-4 {
+  color: @color-theme-4;
+
+  > ul {
+
+    > li {
+      border-color: @color-theme-4;
+
+      &.active {
+        background: @color-theme-4;
+      }
+    }
+  }
+}
+
+.tab-theme-5 {
+  color: @color-theme-5;
+
+  > ul {
+
+    > li {
+      border-color: @color-theme-5;
+
+      &.active {
+        background: @color-theme-5;
+      }
+    }
+  }
+}
+
+.tab-theme-6 {
+  color: @color-theme-6;
+
+  > ul {
+
+    > li {
+      border-color: @color-theme-6;
+
+      &.active {
+        background: @color-theme-6;
+      }
+    }
+  }
+}
+
+
+// Rounded
+// --------------------------
+
+
+.tab-rounded {
+
+  > ul {
+
+    > li {
+
+      &:first-child {
+        border-radius: 1rem 0 0 1rem;
+      }
+
+      &:last-child {
+        border-radius: 0 1rem 1rem 0;
+      }
+    }
+  }
+}
+
+
+// Tab Bar
+// --------------------------
+
+.tab-bar {
+  background-color: @color-bg;
+  border-top: @border-width solid @color-border;
+  color: @color-gray;
+  text-align: center;
+
+  > ul {
+    display: table;
+    margin: 0;
+    table-layout: fixed;
+    width: 100%;
+
+    > li {
+      display: table-cell;
+      height: 3rem;
+      vertical-align: middle;
+
+      &.active {
+        color: @color-theme-1;
+      }
+    }
+  }
+
+  .fa {
+    display: block;
+    font-size: 2rem;
+  }
+}
+
+.tab-bar-theme-2 {
+
+  > ul {
+
+    > li {
+
+      &.active {
+        color: @color-theme-2;
+      }
+    }
+  }
+}
+
+.tab-bar-theme-3 {
+
+  > ul {
+
+    > li {
+
+      &.active {
+        color: @color-theme-3;
+      }
+    }
+  }
+}
+
+.tab-bar-theme-4 {
+
+  > ul {
+
+    > li {
+
+      &.active {
+        color: @color-theme-4;
+      }
+    }
+  }
+}
+
+.tab-bar-theme-5 {
+
+  > ul {
+
+    > li {
+
+      &.active {
+        color: @color-theme-5;
+      }
+    }
+  }
+}
+
+.tab-bar-theme-6 {
+
+  > ul {
+
+    > li {
+
+      &.active {
+        color: @color-theme-6;
+      }
+    }
+  }
+}
+
+
+// Bar with Text
+// --------------------------
+
+.tab-bar-text {
+
+  .fa {
+    font-size: 1.75rem;
+  }
+
+  .tab-name {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1;
+    margin-top: 3px;
+  }
+}

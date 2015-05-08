@@ -1,0 +1,74 @@
+/**
+ * Created by Ash.Zhang on 2015/5/8.
+ */
+
+
+.side-nav {
+  background: @color-gray-darker;
+  color: #fff;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    border-top: @border-width solid @color-gray-dark;
+    line-height: 3rem;
+    padding-right: @gap;
+
+    > :first-child {
+      margin-left: @gap;
+      margin-right: @gap;
+    }
+  }
+
+  .side-nav-icon {
+    width: 1rem;
+  }
+
+  .side-nav-arrow {
+    float: right;
+    line-height: 3rem;
+    text-align: center;
+    width: 1rem;
+  }
+
+  // Level 1
+  > ul {
+
+    > li {
+      position: relative;
+
+      &.active {
+        background-color: @color-gray-darkest;
+        border-color: @color-gray-darker;
+
+        &:before {
+          background: @color-theme-1;
+          content: ' ';
+          position: absolute;
+            bottom: 0;
+            left: 0;
+            top: 0;
+          width: 3px;
+        }
+      }
+
+      // Level 2
+      > ul {
+
+        > li {
+          border-color: @color-gray-darker;
+
+          > :first-child {
+            margin-left: @gap * 3;
+          }
+
+          &.active {
+            color: @color-theme-1;
+          }
+        }
+      }
+    }
+  }
+}
