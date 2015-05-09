@@ -6,6 +6,11 @@
 .side-nav {
   background: @color-gray-darker;
   color: #fff;
+  position: fixed;
+    bottom: 0;
+    top: 0;
+  .translateX(-100%);
+  .transition(all 0.3s ease-in-out);
 
   ul {
     margin: 0;
@@ -14,7 +19,10 @@
   li {
     border-top: @border-width solid @color-gray-dark;
     line-height: 3rem;
-    padding-right: @gap;
+
+    span {
+      display: block;
+    }
 
     > :first-child {
       margin-left: @gap;
@@ -23,7 +31,9 @@
   }
 
   .side-nav-icon {
-    width: 1rem;
+    margin-right: @gap;
+    text-align: center;
+    width: @gap;
   }
 
   .side-nav-arrow {
@@ -31,6 +41,13 @@
     line-height: 3rem;
     text-align: center;
     width: 1rem;
+  }
+
+  .number {
+    display: inline-block;
+    float: right;
+    margin-right: @gap;
+    margin-top: (3rem - 1.2rem) / 2;
   }
 
   // Level 1
@@ -54,8 +71,13 @@
         }
       }
 
+      &:last-child {
+        border-bottom: @border-width solid @color-gray-dark;
+      }
+
       // Level 2
       > ul {
+        display: none;
 
         > li {
           border-color: @color-gray-darker;
@@ -71,4 +93,12 @@
       }
     }
   }
+}
+
+
+// Opened
+// --------------------------
+
+.side-nav-open {
+  .translateX(80%);
 }

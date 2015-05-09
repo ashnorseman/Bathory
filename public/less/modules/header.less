@@ -7,8 +7,12 @@
   background: @color-theme-1;
   color: #fff;
   height: 2.5rem;
-  position: relative;
+  position: fixed;
+    left: 0;
+    top: 0;
+    z-index: @z-header;
   text-align: center;
+  width: 100%;
 
   > h1 {
     line-height: 2.5rem;
@@ -22,7 +26,11 @@
   line-height: 2.5rem;
   position: absolute;
     top: 0;
-  width: 2.5em;
+  width: 1.5rem;
+
+  > .fa {
+    width: 1.5rem;
+  }
 }
 
 .header-btn-left {

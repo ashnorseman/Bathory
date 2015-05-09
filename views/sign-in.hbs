@@ -19,7 +19,7 @@
     </div>
     <div class="login-forgot"><a href="#">Forgot password?</a></div>
     <div class="form-control">
-      <button type="button">SIGN IN</button>
+      <button type="button" id="sign-in">SIGN IN</button>
     </div>
     <div class="login-sign-up">
       <p>Don't have an account?</p>
@@ -46,6 +46,10 @@
         }
       }).blur(function () {
         $html.removeClass('login-focused');
+      });
+
+      $('#sign-in').click(function () {
+        location.href = '/index';
       });
     });
   </script>
