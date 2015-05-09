@@ -1,0 +1,73 @@
+/**
+ * Created by Ash on 2015/5/9.
+ */
+
+
+.full-screen {
+  height: 100%;
+
+  > body {
+    height: 100%;
+  }
+}
+
+
+// Login
+// --------------------------
+
+.login {
+  background: @color-gray-darkest;
+  height: 100%;
+}
+
+.login-header {
+  border-bottom: 2px solid @color-theme-1;
+  color: #fff;
+  .display(flex);
+  .flex-direction(column);
+  .justify-content(center);
+  height: 40%;
+  letter-spacing: 0.1em;
+  overflow: hidden;
+  text-align: center;
+  .transition(all 0.3s ease-in-out);
+
+  > h1 {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+
+  > h2 {
+    font-weight: 400;
+    margin-top: 0;
+  }
+}
+
+.login-form {
+  color: @color-gray;
+  margin: @gap * 2 @gap / 2;
+
+  .fa-lock {
+    font-size: 1.5rem;
+  }
+}
+
+.login-forgot {
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+.login-sign-up {
+  margin: @gap * 2 0 0;
+  text-align: center;
+}
+
+
+// Login: Input focused
+
+.login-focused {
+
+  .login-header {
+    height: 0;
+  }
+}

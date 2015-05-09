@@ -1,0 +1,45 @@
+<div class="container login">
+  <header class="row login-header">
+    <h1>Bathory</h1>
+    <h2>Mobile framework</h2>
+  </header>
+
+  <form class="login-form">
+    <div class="form-control">
+      <div class="form-input-icon">
+        <input type="email" class="input-transparent" placeholder="Username">
+        <i class="fa fa-envelope"></i>
+      </div>
+    </div>
+    <div class="form-control">
+      <div class="form-input-icon">
+        <input type="password" class="input-transparent" placeholder="Password">
+        <i class="fa fa-lock"></i>
+      </div>
+    </div>
+    <div class="login-forgot"><a href="#">Forgot password?</a></div>
+    <div class="form-control">
+      <button type="button">SIGN IN</button>
+    </div>
+    <div class="login-sign-up">
+      <p>Don't have an account?</p>
+      <p><a href="#">SIGN UP</a></p>
+    </div>
+  </form>
+</div>
+
+{{#section 'pageScript'}}
+  <script>
+    $(function () {
+      var $html = $('html');
+
+      $html.addClass('full-screen');
+
+      $('input').focus(function () {
+        $html.addClass('login-focused');
+      }).blur(function () {
+        $html.removeClass('login-focused');
+      });
+    });
+  </script>
+{{/section}}

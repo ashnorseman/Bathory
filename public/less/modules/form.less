@@ -20,15 +20,15 @@ select {
   width: 100%;
 }
 
-input[type=checkbox],
-input[type=radio] {
+[type=checkbox],
+[type=radio] {
   display: inline;
   height: auto;
   width: auto;
 }
 
-input[type=date],
-input[type=time] {
+[type=date],
+[type=time] {
   display: inline;
   width: auto;
 }
@@ -107,28 +107,40 @@ button {
 // Input
 // --------------------------
 
-input[type=text],
-input[type=url],
-input[type=email],
-input[type=number],
-input[type=search] {
+[type=text],
+[type=password],
+[type=url],
+[type=email],
+[type=number],
+[type=search] {
   background: @color-bg;
   border: @border-width solid @color-border;
   box-shadow: none;
   padding-left: @gap / 2;
   padding-right: @gap / 2;
   -webkit-appearance: none;
+  .transition(all 0.3s ease-in-out);
 
   &:focus {
     background: #fff;
   }
 }
 
-input[type=date],
-input[type=time] {
+[type=date],
+[type=time] {
   background: @color-bg;
   border: @border-width solid @color-border;
   box-shadow: none;
+}
+
+.input-transparent {
+  background: rgba(255, 255, 255, 0.15);
+  border: 0;
+  color: @color-gray-lightest;
+
+  &:focus {
+    background: rgba(0, 0, 0, 0.15);
+  }
 }
 
 
@@ -138,4 +150,35 @@ input[type=time] {
 select {
   background: @color-bg;
   border: @border-width solid @color-border;
+
+  &:focus {
+    background: #fff;
+  }
+}
+
+
+// Form Structure
+// --------------------------
+
+.form-control {
+  margin: @gap 0;
+}
+
+.form-input-icon {
+  position: relative;
+
+  > input {
+    padding-right: @control-height;
+  }
+
+  > .fa {
+    height: @control-height;
+    font-size: 1.25rem;
+    line-height: @control-height;
+    position: absolute;
+      right: 0;
+      top: 0;
+    text-align: center;
+    width: @control-height;
+  }
 }
