@@ -37,10 +37,16 @@
 
       $('input').focus(function () {
         $html.addClass('login-focused');
-        $(window).scrollTop(0);
+
+        setTimeout(function () {
+          $(window).scrollTop(0);
+        }, 300);
       }).blur(function () {
         $html.removeClass('login-focused');
-        $(window).scrollTop(0);
+
+        setTimeout(function () {
+          $(window).scrollTop(0);
+        }, 300);
       });
     });
   </script>
