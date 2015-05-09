@@ -45,7 +45,7 @@ app.get('/:page', function (req, res) {
 
 // Index
 app.get('/', function (req, res) {
-  res.render('index');
+  res.render('sign-in');
 });
 
 // 404

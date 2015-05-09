@@ -32,7 +32,7 @@
       <li><span><i class="side-nav-icon fa fa-comment"></i>Social <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
       <li><span><i class="side-nav-icon fa fa-user" style="font-size: 1.125em;"></i>Profile <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
       <li><span><i class="side-nav-icon fa fa-cog" style="font-size: 1.125em;"></i>Settings <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
-      <li><span><i class="side-nav-icon fa fa-sign-out" style="font-size: 1.125em;"></i>Sign out <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
+      <li><span id="side-nav-sign-out"><i class="side-nav-icon fa fa-sign-out" style="font-size: 1.125em;"></i>Sign out <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
     </ul>
   </nav>
 </div>
@@ -54,6 +54,10 @@
         $li.addClass('active').siblings().removeClass('active')
             .children('ul').hide();
         $li.children('ul').show();
+      });
+
+      $('#side-nav-sign-out').click(function () {
+        location.href = '/sign-in';
       });
     });
   </script>
