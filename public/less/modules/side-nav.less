@@ -6,15 +6,16 @@
 .side-nav {
   background: @color-gray-darker;
   color: #fff;
+  height: 100%;
   position: absolute;
     left: 0;
     top: 0;
   width: 80%;
-  .translateX(-100%);
-  .transition(all 0.3s ease-in-out);
 
   ul {
     margin: 0;
+    overflow: hidden;
+    .transition(all 0.3s ease-in-out);
   }
 
   li {
@@ -94,6 +95,41 @@
       }
     }
   }
+}
+
+
+// User
+// --------------------------
+
+.side-nav-user {
+  &:extend(.clearfix all);
+  padding: @gap;
+}
+
+.side-nav-avatar {
+  border: 3px solid @color-theme-1;
+  border-radius: 50%;
+  float: left;
+  height: 4rem;
+  margin-right: @gap * 2;
+  overflow: hidden;
+  width: 4rem;
+
+  > img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.side-nav-username {
+  font-size: 1.125rem;
+  margin: @gap / 2 0 0;
+}
+
+.side-nav-username-sub {
+  color: @color-gray;
+  font-size: 0.875rem;
+  margin: @gap / 2 0 0;
 }
 
 
