@@ -50,10 +50,18 @@
 
       $('body').swipeRight(function (e, start, end) {
 
+        if ($html.hasClass('side-nav-open')) {
+          return false;
+        }
+
         if (start.x <= 50) {
           $html.addClass('side-nav-open');
         }
       }).swipeLeft(function (e, start, end) {
+
+        if ($html.hasClass('side-nav-open')) {
+          return false;
+        }
 
         if (document.documentElement.clientWidth - start.x <= 50) {
           $html.removeClass('side-nav-open');
