@@ -1,4 +1,4 @@
-<div class="container login">
+<div class="container login sign-in">
   <header class="row login-header">
     <h1>Bathory</h1>
     <h2>Mobile framework</h2>
@@ -8,6 +8,12 @@
     <div class="form-control">
       <div class="form-input-icon">
         <input type="email" class="input-transparent" placeholder="Username">
+        <i class="fa fa-user"></i>
+      </div>
+    </div>
+    <div class="form-control">
+      <div class="form-input-icon">
+        <input type="email" class="input-transparent" placeholder="Email">
         <i class="fa fa-envelope"></i>
       </div>
     </div>
@@ -17,13 +23,17 @@
         <i class="fa fa-lock"></i>
       </div>
     </div>
-    <div class="login-forgot"><a href="#">Forgot password?</a></div>
     <div class="form-control">
-      <button type="button">SIGN IN</button>
+      <div class="form-input-icon">
+        <label><input type="checkbox"> <a href="#">I accept the terms and conditions.</a></label>
+      </div>
+    </div>
+    <div class="form-control">
+      <button type="button">SIGN UP</button>
     </div>
     <div class="login-sign-up">
-      <p>Don't have an account?</p>
-      <p><a href="#">SIGN UP</a></p>
+      <p>Already a member?</p>
+      <p><a href="/sign-in">SIGN IN</a></p>
     </div>
   </form>
 </div>
@@ -37,8 +47,10 @@
 
       $('input').focus(function () {
         $html.addClass('login-focused');
+        $(window).scrollTop(0);
       }).blur(function () {
         $html.removeClass('login-focused');
+        $(window).scrollTop(0);
       });
     });
   </script>
