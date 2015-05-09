@@ -36,17 +36,16 @@
       $html.addClass('full-screen');
 
       $('input').focus(function () {
-        $html.addClass('login-focused');
 
-        setTimeout(function () {
-          $(window).scrollTop(0);
-        }, 300);
+        if (!$html.hasClass('login-focused')) {
+          $html.addClass('login-focused');
+
+          setTimeout(function () {
+            $(window).scrollTop(0);
+          }, 300);
+        }
       }).blur(function () {
         $html.removeClass('login-focused');
-
-        setTimeout(function () {
-          $(window).scrollTop(0);
-        }, 300);
       });
     });
   </script>
