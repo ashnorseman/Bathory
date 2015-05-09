@@ -6,9 +6,10 @@
 .side-nav {
   background: @color-gray-darker;
   color: #fff;
-  position: fixed;
-    bottom: 0;
+  position: absolute;
+    left: 0;
     top: 0;
+  width: 80%;
   .translateX(-100%);
   .transition(all 0.3s ease-in-out);
 
@@ -100,5 +101,8 @@
 // --------------------------
 
 .side-nav-open {
-  .translateX(80%);
+
+  .main {
+    .translateX(80%);
+  }
 }

@@ -16,56 +16,36 @@
 
     <p>Ab accusantium aliquid dicta doloremque neque odio officia, repellat voluptatem.</p>
   </div>
-</div>
 
-<nav class="side-nav" id="side-nav">
-  <ul>
-    <li><span><i class="side-nav-icon fa fa-money"></i>Payslip <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
-    <li><span><i class="side-nav-icon fa fa-film"></i>Multimedia <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
-    <li>
-      <span><i class="side-nav-icon fa fa-shopping-cart" style="font-size: 1.125em;"></i>Shop <i class="side-nav-arrow fa fa-angle-right"></i></span>
-      <ul>
-        <li><span>News</span> <span class="number">25</span></li>
-        <li><span>Trends 2015</span></li>
-        <li><span>People</span></li>
-      </ul>
-    </li>
-    <li><span><i class="side-nav-icon fa fa-comment"></i>Social <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
-    <li><span><i class="side-nav-icon fa fa-user" style="font-size: 1.125em;"></i>Profile <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
-    <li><span><i class="side-nav-icon fa fa-cog" style="font-size: 1.125em;"></i>Settings <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
-    <li><span><i class="side-nav-icon fa fa-sign-out" style="font-size: 1.125em;"></i>Sign out <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
-  </ul>
-</nav>
+  <nav class="side-nav" id="side-nav">
+    <ul>
+      <li><span><i class="side-nav-icon fa fa-money"></i>Payslip <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
+      <li><span><i class="side-nav-icon fa fa-film"></i>Multimedia <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
+      <li>
+        <span><i class="side-nav-icon fa fa-shopping-cart" style="font-size: 1.125em;"></i>Shop <i class="side-nav-arrow fa fa-angle-right"></i></span>
+        <ul>
+          <li><span>News</span> <span class="number">25</span></li>
+          <li><span>Trends 2015</span></li>
+          <li><span>People</span></li>
+        </ul>
+      </li>
+      <li><span><i class="side-nav-icon fa fa-comment"></i>Social <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
+      <li><span><i class="side-nav-icon fa fa-user" style="font-size: 1.125em;"></i>Profile <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
+      <li><span><i class="side-nav-icon fa fa-cog" style="font-size: 1.125em;"></i>Settings <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
+      <li><span><i class="side-nav-icon fa fa-sign-out" style="font-size: 1.125em;"></i>Sign out <i class="side-nav-arrow fa fa-angle-right"></i></span></li>
+    </ul>
+  </nav>
+</div>
 
 {{#section 'pageScript'}}
   <script>
     $(function () {
       var $html = $('html');
 
-      $('#side-nav').width(document.documentElement.clientWidth * 0.8);
+      $('#side-nav').height(document.documentElement.clientHeight);
 
       $('#side-nav-toggle').click(function () {
         $html.toggleClass('side-nav-open');
-      });
-
-      $('body').swipeRight(function (e, start, end) {
-
-        if ($html.hasClass('side-nav-open')) {
-          return false;
-        }
-
-        if (start.x <= 50) {
-          $html.addClass('side-nav-open');
-        }
-      }).swipeLeft(function (e, start, end) {
-
-        if ($html.hasClass('side-nav-open')) {
-          return false;
-        }
-
-        if (document.documentElement.clientWidth - start.x <= 50) {
-          $html.removeClass('side-nav-open');
-        }
       });
 
       $('.side-nav > ul > li > i, .side-nav > ul > li > span').click(function () {
